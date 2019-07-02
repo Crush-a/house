@@ -31,7 +31,7 @@ public class DistrictController {
      public Map<String,Object> getDistrict(Integer page,Integer rows){
        //调用业务
         PageInfo<District> pageInfo=districtService.getDistrictByPage(page,rows);
-        Map<String,Object> map=new HashMap<>();
+        Map<String,Object> map=new HashMap<String,Object>();
         map.put("total",pageInfo.getTotal());
         map.put("rows",pageInfo.getList());
         return map;
