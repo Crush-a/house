@@ -32,7 +32,7 @@ public class UsersController {
     public Map<String,Object> getUsers(UserCondition condition){
         //调用业务
         PageInfo<Users> pageInfo=userService.getUserByPage(condition);
-        Map<String,Object> map=new HashMap<>();
+        Map<String,Object> map=new HashMap<String,Object>();
         map.put("total",pageInfo.getTotal());
         map.put("rows",pageInfo.getList());
         return map;
