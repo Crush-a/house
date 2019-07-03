@@ -32,7 +32,7 @@ public class TypeController {
      public Map<String,Object> getType(Integer page,Integer rows){
        //调用业务
         PageInfo<Type> pageInfo=typeService.getTypeByPage(page,rows);
-        Map<String,Object> map=new HashMap<>();
+        Map<String,Object> map=new HashMap<String, Object>();
         map.put("total",pageInfo.getTotal());
         map.put("rows",pageInfo.getList());
         return map;
